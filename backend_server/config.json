@@ -1,0 +1,103 @@
+{
+  "server": {
+    "port": 3000,
+    "host": "0.0.0.0",
+    "protocol": "https",
+    "wsProtocol": "wss"
+  },
+  "discovery": {
+    "enabled": true,
+    "serviceName": "_resourcepool._tcp",
+    "servicePort": 3000,
+    "secure": true
+  },
+  "resources": {
+    "maxCpuAllocation": 80,
+    "maxMemoryAllocation": 80,
+    "maxStorageAllocation": 50,
+    "enableGpuSharing": true
+  },
+  "security": {
+    "requireAuth": true,
+    "maxDevices": 100,
+    "jwtExpiry": "24h",
+    "refreshTokenExpiry": "7d",
+    "enableAuditLog": true,
+    "enableEncryption": true,
+    "enableHoneypots": true,
+    "enableIDS": true,
+    "enableAI": true,
+    "enableBlockchain": true,
+    "enableZeroTrust": true,
+    "enableBiometric": true,
+    "enableDeepFakeDetection": true,
+    "enableTrustMesh": true,
+    "enableSelfHealing": true,
+    "enableThreatBroadcast": true
+  },
+  "hsm": {
+    "enabled": false,
+    "type": "YUBIHSM",
+    "connector": "http://localhost:12345",
+    "authKeyId": 1,
+    "domain": 1
+  },
+  "fido2": {
+    "enabled": true,
+    "rpId": "resourcepool.local",
+    "rpName": "Resource Pooling Network",
+    "attestation": "direct",
+    "userVerification": "required"
+  },
+  "rateLimit": {
+    "enabled": true,
+    "api": {
+      "windowMs": 900000,
+      "max": 100,
+      "adaptive": {
+        "enabled": true,
+        "threshold": 0.8,
+        "scaleFactor": 0.5
+      }
+    },
+    "auth": {
+      "windowMs": 900000,
+      "max": 5
+    },
+    "websocket": {
+      "windowMs": 60000,
+      "max": 10
+    }
+  },
+  "monitoring": {
+    "updateInterval": 2000,
+    "deviceTimeout": 30000,
+    "sessionTimeout": 86400000,
+    "logLevel": "info"
+  },
+  "trustMesh": {
+    "enabled": true,
+    "quorumSize": 3,
+    "consensusThreshold": 0.67,
+    "trustDecayDays": 7
+  },
+  "biometric": {
+    "enabled": true,
+    "voiceMatchThreshold": 0.90,
+    "faceMatchThreshold": 0.95,
+    "livenessRequired": true,
+    "livenessThreshold": 0.80,
+    "deepFakeDetectionEnabled": true,
+    "maxFailedAttempts": 3,
+    "lockoutDuration": 1800000
+  },
+  "pluginSecurity": {
+    "enabled": true,
+    "scanRequired": true,
+    "minimumScore": 85,
+    "allowDangerousPermissions": false,
+    "communityReviewRequired": true,
+    "reviewersRequired": 3
+  }
+}
+

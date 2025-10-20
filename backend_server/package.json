@@ -1,0 +1,51 @@
+{
+  "name": "resource-pooling-backend-maximum-security",
+  "version": "3.0.0",
+  "description": "MAXIMUM SECURITY Resource Pooling Server - Fort Knox + Honeypot + AI + Quantum + Blockchain + Zero-Trust",
+  "main": "src/server-maximum-security.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server-maximum-security.js",
+    "start:secure": "node src/server-ultra-secure.js",
+    "start:basic": "node src/server.js",
+    "dev": "nodemon src/server-maximum-security.js",
+    "generate-certs": "node src/generate-certificates.js",
+    "init-security": "node src/init-security.js"
+  },
+  "keywords": [
+    "resource-pooling",
+    "distributed-computing",
+    "maximum-security",
+    "quantum-resistant",
+    "ai-security",
+    "blockchain",
+    "zero-trust",
+    "honeypot",
+    "intrusion-detection"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.14.2",
+    "bonjour-service": "^1.1.1",
+    "systeminformation": "^5.21.20",
+    "uuid": "^9.0.1",
+    "cors": "^2.8.5",
+    "jsonwebtoken": "^9.0.2",
+    "bcrypt": "^5.1.1",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
+    "crypto-js": "^4.2.0",
+    "node-forge": "^1.3.1",
+    "express-validator": "^7.0.1",
+    "winston": "^3.11.0",
+    "winston-daily-rotate-file": "^4.7.1",
+    "dotenv": "^16.3.1",
+    "otplib": "^12.0.1",
+    "base64url": "^3.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

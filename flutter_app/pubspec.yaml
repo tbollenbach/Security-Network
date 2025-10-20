@@ -1,0 +1,54 @@
+name: resource_pooling_network
+description: Multi-platform resource pooling and device networking app with Fort Knox security
+publish_to: 'none'
+version: 2.0.0+2
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # UI & Icons
+  cupertino_icons: ^1.0.6
+  
+  # Networking
+  web_socket_channel: ^2.4.0
+  http: ^1.1.0
+  
+  # State Management
+  provider: ^6.1.1
+  
+  # Device Info
+  device_info_plus: ^9.1.1
+  
+  # Network Discovery
+  multicast_dns: ^0.3.2+4
+  network_info_plus: ^5.0.1
+  
+  # Secure Storage
+  shared_preferences: ^2.2.2
+  # flutter_secure_storage: ^9.0.0  # Uncomment for production
+  
+  # Encryption
+  crypto: ^3.0.3
+  pointycastle: ^3.7.3
+  encrypt: ^5.0.3
+  
+  # Charts & Monitoring
+  fl_chart: ^0.65.0
+  
+  # Utilities
+  intl: ^0.18.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
