@@ -9,3 +9,12 @@ logs/
 
 
 
+
+
+# Security files
+.env.security
+config.secure.json
+certs/*.pem
+certs/*.key
+logs/
+*.log
