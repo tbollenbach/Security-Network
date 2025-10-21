@@ -95,8 +95,8 @@ export class AuditLogger {
    * Generate tamper-proof signature for log entry
    */
   generateLogSignature(logData) {
-    const crypto = await import('crypto');
-    return crypto.default
+    const crypto = require('crypto');
+    return crypto
       .createHash('sha256')
       .update(JSON.stringify(logData))
       .digest('hex');
